@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.timeline.repository.FollowMapper">
+    <insert id="registFollow">
+        INSERT INTO FOLLOW(MEMBER_NO, FOLLOW_MEMBER_NO) VALUES(#{memberNo}, #{targetMemberNo})
+    </insert>
+</mapper>

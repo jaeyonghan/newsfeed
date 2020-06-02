@@ -16,12 +16,14 @@ public class NewsFeedController {
 
     public final NewsFeedService newsfeedService;
 
-    public NewsFeedController(@Qualifier("newsFeedServiceImpl") NewsFeedService newsfeedService) {
+    public NewsFeedController( NewsFeedService newsfeedService) {
         this.newsfeedService = newsfeedService;
     }
 
     @GetMapping("/list")
     public DefaultHttpRes<List<NewsFeed>> getNewsFeedList(){
+
+        //TODO 추가 구현 필요
         return newsfeedService.getNewsFeedList();
     }
 }

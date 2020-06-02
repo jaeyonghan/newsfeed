@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.timeline.repository.PostingMapper">
+    <select id="selectPostingList" resultType="com.example.timeline.model.PostingInfo">
+      SELECT POST_NO as postNo
+        , CONTENT
+        , CONTENT_TYPE as contentType
+        FROM POSTING
+        WHERE MEMBER_NO = #{memberNo};
+    </select>
+
+    <insert id="createPosting">
+        INSERT INTO POSTING(MEMBER_NO, CONTENT, CONTENT_TYPE, REG_DT) VALUES(#{memberNo}, #{content}, #{contentType}, NOW());
+    </insert>
+</mapper>
