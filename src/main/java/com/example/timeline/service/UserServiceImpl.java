@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
 
         if(checkDuplicateUser(req)){
             result.setCode(BaseCode.EXIST_USER_INFO);
+            return result;
         }
         userMapper.registUser(req);
 

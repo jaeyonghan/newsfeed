@@ -1,9 +1,21 @@
 package com.example.timeline.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AccessLevel;
 import lombok.Data;
+import lombok.experimental.FieldDefaults;
 
 @Data
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class NewsFeed {
-    private String type;
-    private Object contents;
+
+    @JsonProperty("post_no")
+    Integer postNo;
+
+    @JsonProperty("content")
+    String content;
+
+    @JsonProperty("content_type")
+    String contentType;
+
 }

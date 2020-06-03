@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Mapper
 public interface FollowMapper {
     void registFollow(Integer memberNo, Integer targetMemberNo);
+    void unFollow(Integer memberNo, Integer targetMemberNo);
 }

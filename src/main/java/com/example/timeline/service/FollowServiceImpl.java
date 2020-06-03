@@ -16,4 +16,9 @@ public class FollowServiceImpl implements FollowService {
     public void registFollow(Integer memberNo, Integer targetMemberNo) {
         followMapper.registFollow(memberNo, targetMemberNo);
     }
+
+    @Override
+    public void unFollow(Integer memberNo, Integer targetMemberNo) {
+        followMapper.unFollow(memberNo, targetMemberNo);
+    }
 }

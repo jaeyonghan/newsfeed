@@ -4,4 +4,11 @@
     <insert id="registFollow">
         INSERT INTO FOLLOW(MEMBER_NO, FOLLOW_MEMBER_NO) VALUES(#{memberNo}, #{targetMemberNo})
     </insert>
+
+    <delete id="unFollow">
+        DELETE
+        FROM FOLLOW
+        WHERE MEMBER_NO = #{memberNo}
+        AND follow_member_no = #{targetMemberNo};
+    </delete>
 </mapper>

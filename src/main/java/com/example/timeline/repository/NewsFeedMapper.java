@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 @Mapper
 public interface NewsFeedMapper {
-    DefaultHttpRes<List<NewsFeed>> getNewsFeedList();
+    List<NewsFeed> getNewsFeedList(Integer memberNo);
 }

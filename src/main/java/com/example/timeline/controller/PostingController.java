@@ -5,11 +5,13 @@ import com.example.timeline.model.PostingInfo;
 import com.example.timeline.model.req.CreatePostingReq;
 import com.example.timeline.model.res.PostingListRtn;
 import com.example.timeline.service.PostingService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Slf4j
 @RestController
 @RequestMapping("timeline/posting")
 public class PostingController {
@@ -22,6 +24,7 @@ public class PostingController {
 
     @GetMapping("/{member_no}")
     public DefaultHttpRes<PostingListRtn> getPostingList(@PathVariable(value = "member_no") int memberNo) {
+        log.info("getPostingList req is : {}", memberNo);
         return postingService.getPostingList(memberNo);
     }
 

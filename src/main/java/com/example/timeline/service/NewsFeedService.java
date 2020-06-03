@@ -8,5 +8,5 @@ import java.util.List;
 
 @Service
 public interface NewsFeedService {
-    DefaultHttpRes<List<NewsFeed>> getNewsFeedList();
+    DefaultHttpRes<List<NewsFeed>> getNewsFeedList(Integer memberNo);
 }

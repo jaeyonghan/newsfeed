@@ -8,7 +8,7 @@ import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegistFollowReq {
+public class FollowReq {
 
     @JsonProperty("target_member_no")
     Integer targetMemberNo;
